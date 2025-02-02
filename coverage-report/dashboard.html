@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\Users\Sara\Desktop\Laravel-From-Scratch-Blog-Project\app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/style.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">C:\Users\Sara\Desktop\Laravel-From-Scratch-Blog-Project\app</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/Controllers/NewsletterController.php.html#9">App\Http\Controllers\NewsletterController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/PostCommentsController.php.html#8">App\Http\Controllers\PostCommentsController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/Authenticate.php.html#7">App\Http\Middleware\Authenticate</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/TrustHosts.php.html#7">App\Http\Middleware\TrustHosts</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Models/Category.php.html#8">App\Models\Category</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Models/Comment.php.html#8">App\Models\Comment</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Providers/BroadcastServiceProvider.php.html#8">App\Providers\BroadcastServiceProvider</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/MailchimpNewsletter.php.html#7">App\Services\MailchimpNewsletter</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/AdminPostController.php.html#8">App\Http\Controllers\AdminPostController</a></td><td class="text-right">11%</td></tr>
+       <tr><td><a href="Providers/AppServiceProvider.php.html#14">App\Providers\AppServiceProvider</a></td><td class="text-right">57%</td></tr>
+       <tr><td><a href="Http/Controllers/PostController.php.html#8">App\Http\Controllers\PostController</a></td><td class="text-right">62%</td></tr>
+       <tr><td><a href="Console/Kernel.php.html#8">App\Console\Kernel</a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Http/Controllers/RegisterController.php.html#7">App\Http\Controllers\RegisterController</a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Http/Controllers/SessionsController.php.html#7">App\Http\Controllers\SessionsController</a></td><td class="text-right">76%</td></tr>
+       <tr><td><a href="Http/Middleware/RedirectIfAuthenticated.php.html#10">App\Http\Middleware\RedirectIfAuthenticated</a></td><td class="text-right">80%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/Controllers/AdminPostController.php.html#8">App\Http\Controllers\AdminPostController</a></td><td class="text-right">65</td></tr>
+       <tr><td><a href="Http/Controllers/NewsletterController.php.html#9">App\Http\Controllers\NewsletterController</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Middleware/Authenticate.php.html#7">App\Http\Middleware\Authenticate</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Controllers/SessionsController.php.html#7">App\Http\Controllers\SessionsController</a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Http/Middleware/RedirectIfAuthenticated.php.html#10">App\Http\Middleware\RedirectIfAuthenticated</a></td><td class="text-right">4</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Console/Kernel.php.html#25"><abbr title="App\Console\Kernel::schedule">schedule</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/AdminPostController.php.html#17"><abbr title="App\Http\Controllers\AdminPostController::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/AdminPostController.php.html#22"><abbr title="App\Http\Controllers\AdminPostController::store">store</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/AdminPostController.php.html#32"><abbr title="App\Http\Controllers\AdminPostController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/AdminPostController.php.html#37"><abbr title="App\Http\Controllers\AdminPostController::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/AdminPostController.php.html#50"><abbr title="App\Http\Controllers\AdminPostController::destroy">destroy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/AdminPostController.php.html#57"><abbr title="App\Http\Controllers\AdminPostController::validatePost">validatePost</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/NewsletterController.php.html#11"><abbr title="App\Http\Controllers\NewsletterController::__invoke">__invoke</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/PostCommentsController.php.html#10"><abbr title="App\Http\Controllers\PostCommentsController::store">store</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/PostController.php.html#19"><abbr title="App\Http\Controllers\PostController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/RegisterController.php.html#9"><abbr title="App\Http\Controllers\RegisterController::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/SessionsController.php.html#9"><abbr title="App\Http\Controllers\SessionsController::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/Authenticate.php.html#15"><abbr title="App\Http\Middleware\Authenticate::redirectTo">redirectTo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/TrustHosts.php.html#14"><abbr title="App\Http\Middleware\TrustHosts::hosts">hosts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Models/Category.php.html#12"><abbr title="App\Models\Category::posts">posts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Models/Comment.php.html#12"><abbr title="App\Models\Comment::post">post</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Models/Comment.php.html#17"><abbr title="App\Models\Comment::author">author</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Providers/BroadcastServiceProvider.php.html#15"><abbr title="App\Providers\BroadcastServiceProvider::boot">boot</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/MailchimpNewsletter.php.html#9"><abbr title="App\Services\MailchimpNewsletter::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/MailchimpNewsletter.php.html#14"><abbr title="App\Services\MailchimpNewsletter::subscribe">subscribe</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Providers/AppServiceProvider.php.html#21"><abbr title="App\Providers\AppServiceProvider::register">register</abbr></a></td><td class="text-right">28%</td></tr>
+       <tr><td><a href="Providers/RouteServiceProvider.php.html#57"><abbr title="App\Providers\RouteServiceProvider::configureRateLimiting">configureRateLimiting</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Http/Controllers/RegisterController.php.html#14"><abbr title="App\Http\Controllers\RegisterController::store">store</abbr></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="Http/Controllers/SessionsController.php.html#14"><abbr title="App\Http\Controllers\SessionsController::store">store</abbr></a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="Http/Middleware/RedirectIfAuthenticated.php.html#20"><abbr title="App\Http\Middleware\RedirectIfAuthenticated::handle">handle</abbr></a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="Providers/AppServiceProvider.php.html#38"><abbr title="App\Providers\AppServiceProvider::boot">boot</abbr></a></td><td class="text-right">85%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/Controllers/AdminPostController.php.html#37"><abbr title="App\Http\Controllers\AdminPostController::update">update</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Controllers/AdminPostController.php.html#57"><abbr title="App\Http\Controllers\AdminPostController::validatePost">validatePost</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Controllers/NewsletterController.php.html#11"><abbr title="App\Http\Controllers\NewsletterController::__invoke">__invoke</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Middleware/Authenticate.php.html#15"><abbr title="App\Http\Middleware\Authenticate::redirectTo">redirectTo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Middleware/RedirectIfAuthenticated.php.html#20"><abbr title="App\Http\Middleware\RedirectIfAuthenticated::handle">handle</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Providers/RouteServiceProvider.php.html#57"><abbr title="App\Providers\RouteServiceProvider::configureRateLimiting">configureRateLimiting</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Http/Controllers/SessionsController.php.html#14"><abbr title="App\Http\Controllers\SessionsController::store">store</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.32</a> using <a href="https://secure.php.net/" target="_top">PHP 8.3.11</a> and <a href="https://phpunit.de/">PHPUnit 9.6.22</a> at Sun Feb 2 0:07:13 UTC 2025.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="_js/d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([8,0,1,0,0,0,1,3,1,1,1,14], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([20,0,0,1,0,0,0,1,1,3,0,15], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[66.66666666666666,2,"<a href=\"Console\/Kernel.php.html#8\">App\\Console\\Kernel<\/a>"],[100,1,"<a href=\"Exceptions\/Handler.php.html#8\">App\\Exceptions\\Handler<\/a>"],[11.538461538461538,9,"<a href=\"Http\/Controllers\/AdminPostController.php.html#8\">App\\Http\\Controllers\\AdminPostController<\/a>"],[100,0,"<a href=\"Http\/Controllers\/CommentController.php.html#7\">App\\Http\\Controllers\\CommentController<\/a>"],[100,0,"<a href=\"Http\/Controllers\/Controller.php.html#10\">App\\Http\\Controllers\\Controller<\/a>"],[0,2,"<a href=\"Http\/Controllers\/NewsletterController.php.html#9\">App\\Http\\Controllers\\NewsletterController<\/a>"],[0,1,"<a href=\"Http\/Controllers\/PostCommentsController.php.html#8\">App\\Http\\Controllers\\PostCommentsController<\/a>"],[62.5,2,"<a href=\"Http\/Controllers\/PostController.php.html#8\">App\\Http\\Controllers\\PostController<\/a>"],[66.66666666666666,2,"<a href=\"Http\/Controllers\/RegisterController.php.html#7\">App\\Http\\Controllers\\RegisterController<\/a>"],[76.92307692307693,4,"<a href=\"Http\/Controllers\/SessionsController.php.html#7\">App\\Http\\Controllers\\SessionsController<\/a>"],[100,0,"<a href=\"Http\/Kernel.php.html#8\">App\\Http\\Kernel<\/a>"],[0,2,"<a href=\"Http\/Middleware\/Authenticate.php.html#7\">App\\Http\\Middleware\\Authenticate<\/a>"],[100,0,"<a href=\"Http\/Middleware\/EncryptCookies.php.html#7\">App\\Http\\Middleware\\EncryptCookies<\/a>"],[100,0,"<a href=\"Http\/Middleware\/PreventRequestsDuringMaintenance.php.html#7\">App\\Http\\Middleware\\PreventRequestsDuringMaintenance<\/a>"],[80,4,"<a href=\"Http\/Middleware\/RedirectIfAuthenticated.php.html#10\">App\\Http\\Middleware\\RedirectIfAuthenticated<\/a>"],[100,0,"<a href=\"Http\/Middleware\/TrimStrings.php.html#7\">App\\Http\\Middleware\\TrimStrings<\/a>"],[0,1,"<a href=\"Http\/Middleware\/TrustHosts.php.html#7\">App\\Http\\Middleware\\TrustHosts<\/a>"],[100,0,"<a href=\"Http\/Middleware\/TrustProxies.php.html#8\">App\\Http\\Middleware\\TrustProxies<\/a>"],[100,0,"<a href=\"Http\/Middleware\/VerifyCsrfToken.php.html#7\">App\\Http\\Middleware\\VerifyCsrfToken<\/a>"],[0,1,"<a href=\"Models\/Category.php.html#8\">App\\Models\\Category<\/a>"],[0,2,"<a href=\"Models\/Comment.php.html#8\">App\\Models\\Comment<\/a>"],[100,4,"<a href=\"Models\/Post.php.html#8\">App\\Models\\Post<\/a>"],[100,2,"<a href=\"Models\/User.php.html#10\">App\\Models\\User<\/a>"],[57.14285714285714,2,"<a href=\"Providers\/AppServiceProvider.php.html#14\">App\\Providers\\AppServiceProvider<\/a>"],[100,1,"<a href=\"Providers\/AuthServiceProvider.php.html#9\">App\\Providers\\AuthServiceProvider<\/a>"],[0,1,"<a href=\"Providers\/BroadcastServiceProvider.php.html#8\">App\\Providers\\BroadcastServiceProvider<\/a>"],[100,1,"<a href=\"Providers\/EventServiceProvider.php.html#10\">App\\Providers\\EventServiceProvider<\/a>"],[92.3076923076923,3,"<a href=\"Providers\/RouteServiceProvider.php.html#11\">App\\Providers\\RouteServiceProvider<\/a>"],[0,2,"<a href=\"Services\/MailchimpNewsletter.php.html#7\">App\\Services\\MailchimpNewsletter<\/a>"],[100,1,"<a href=\"View\/Components\/CategoryDropdown.php.html#8\">App\\View\\Components\\CategoryDropdown<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Console\/Kernel.php.html#25\">App\\Console\\Kernel::schedule<\/a>"],[100,1,"<a href=\"Console\/Kernel.php.html#35\">App\\Console\\Kernel::commands<\/a>"],[100,1,"<a href=\"Exceptions\/Handler.php.html#35\">App\\Exceptions\\Handler::register<\/a>"],[100,1,"<a href=\"Http\/Controllers\/AdminPostController.php.html#10\">App\\Http\\Controllers\\AdminPostController::index<\/a>"],[0,1,"<a href=\"Http\/Controllers\/AdminPostController.php.html#17\">App\\Http\\Controllers\\AdminPostController::create<\/a>"],[0,1,"<a href=\"Http\/Controllers\/AdminPostController.php.html#22\">App\\Http\\Controllers\\AdminPostController::store<\/a>"],[0,1,"<a href=\"Http\/Controllers\/AdminPostController.php.html#32\">App\\Http\\Controllers\\AdminPostController::edit<\/a>"],[0,2,"<a href=\"Http\/Controllers\/AdminPostController.php.html#37\">App\\Http\\Controllers\\AdminPostController::update<\/a>"],[0,1,"<a href=\"Http\/Controllers\/AdminPostController.php.html#50\">App\\Http\\Controllers\\AdminPostController::destroy<\/a>"],[0,2,"<a href=\"Http\/Controllers\/AdminPostController.php.html#57\">App\\Http\\Controllers\\AdminPostController::validatePost<\/a>"],[0,2,"<a href=\"Http\/Controllers\/NewsletterController.php.html#11\">App\\Http\\Controllers\\NewsletterController::__invoke<\/a>"],[0,1,"<a href=\"Http\/Controllers\/PostCommentsController.php.html#10\">App\\Http\\Controllers\\PostCommentsController::store<\/a>"],[100,1,"<a href=\"Http\/Controllers\/PostController.php.html#10\">App\\Http\\Controllers\\PostController::index<\/a>"],[0,1,"<a href=\"Http\/Controllers\/PostController.php.html#19\">App\\Http\\Controllers\\PostController::show<\/a>"],[0,1,"<a href=\"Http\/Controllers\/RegisterController.php.html#9\">App\\Http\\Controllers\\RegisterController::create<\/a>"],[75,1,"<a href=\"Http\/Controllers\/RegisterController.php.html#14\">App\\Http\\Controllers\\RegisterController::store<\/a>"],[0,1,"<a href=\"Http\/Controllers\/SessionsController.php.html#9\">App\\Http\\Controllers\\SessionsController::create<\/a>"],[80,2,"<a href=\"Http\/Controllers\/SessionsController.php.html#14\">App\\Http\\Controllers\\SessionsController::store<\/a>"],[100,1,"<a href=\"Http\/Controllers\/SessionsController.php.html#32\">App\\Http\\Controllers\\SessionsController::destroy<\/a>"],[0,2,"<a href=\"Http\/Middleware\/Authenticate.php.html#15\">App\\Http\\Middleware\\Authenticate::redirectTo<\/a>"],[80,4,"<a href=\"Http\/Middleware\/RedirectIfAuthenticated.php.html#20\">App\\Http\\Middleware\\RedirectIfAuthenticated::handle<\/a>"],[0,1,"<a href=\"Http\/Middleware\/TrustHosts.php.html#14\">App\\Http\\Middleware\\TrustHosts::hosts<\/a>"],[0,1,"<a href=\"Models\/Category.php.html#12\">App\\Models\\Category::posts<\/a>"],[0,1,"<a href=\"Models\/Comment.php.html#12\">App\\Models\\Comment::post<\/a>"],[0,1,"<a href=\"Models\/Comment.php.html#17\">App\\Models\\Comment::author<\/a>"],[100,1,"<a href=\"Models\/Post.php.html#14\">App\\Models\\Post::scopeFilter<\/a>"],[100,1,"<a href=\"Models\/Post.php.html#36\">App\\Models\\Post::comments<\/a>"],[100,1,"<a href=\"Models\/Post.php.html#41\">App\\Models\\Post::category<\/a>"],[100,1,"<a href=\"Models\/Post.php.html#46\">App\\Models\\Post::author<\/a>"],[100,1,"<a href=\"Models\/User.php.html#33\">App\\Models\\User::setPasswordAttribute<\/a>"],[100,1,"<a href=\"Models\/User.php.html#38\">App\\Models\\User::posts<\/a>"],[28.57142857142857,1,"<a href=\"Providers\/AppServiceProvider.php.html#21\">App\\Providers\\AppServiceProvider::register<\/a>"],[85.71428571428571,1,"<a href=\"Providers\/AppServiceProvider.php.html#38\">App\\Providers\\AppServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/AuthServiceProvider.php.html#25\">App\\Providers\\AuthServiceProvider::boot<\/a>"],[0,1,"<a href=\"Providers\/BroadcastServiceProvider.php.html#15\">App\\Providers\\BroadcastServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/EventServiceProvider.php.html#28\">App\\Providers\\EventServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/RouteServiceProvider.php.html#36\">App\\Providers\\RouteServiceProvider::boot<\/a>"],[66.66666666666666,2,"<a href=\"Providers\/RouteServiceProvider.php.html#57\">App\\Providers\\RouteServiceProvider::configureRateLimiting<\/a>"],[0,1,"<a href=\"Services\/MailchimpNewsletter.php.html#9\">App\\Services\\MailchimpNewsletter::__construct<\/a>"],[0,1,"<a href=\"Services\/MailchimpNewsletter.php.html#14\">App\\Services\\MailchimpNewsletter::subscribe<\/a>"],[100,1,"<a href=\"View\/Components\/CategoryDropdown.php.html#13\">App\\View\\Components\\CategoryDropdown::render<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
