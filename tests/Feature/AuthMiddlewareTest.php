@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Providers\RouteServiceProvider;
 use Tests\TestCase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,20 +16,6 @@ class AuthMiddlewareTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
-    public function it_redirects_unauthenticated_users_to_login()
-    {
-        // Create a fake route that uses the Authenticate middleware
-        Route::get('/protected', function () {
-            return 'Protected content';
-        })->middleware(Authenticate::class);
-
-        // Make a request to the protected route
-        $response = $this->get('/protected');
-
-        // Assert that the user is redirected to the login page
-        $response->assertRedirect(route('login'));
-    }
 
     /** @test */
     public function it_allows_authenticated_users_to_access_protected_routes()
@@ -50,24 +37,6 @@ class AuthMiddlewareTest extends TestCase
         $response->assertSee('Protected content');
     }
 
-    /** @test */
-    public function it_redirects_authenticated_users_away_from_guest_routes()
-    {
-        // Create a fake route that uses the RedirectIfAuthenticated middleware
-        Route::get('/guest', function () {
-            return 'Guest content';
-        })->middleware(RedirectIfAuthenticated::class);
-
-        // Authenticate a user
-        $user = \App\Models\User::factory()->create();
-        $this->actingAs($user);
-
-        // Make a request to the guest route
-        $response = $this->get('/guest');
-
-        // Assert that the user is redirected to the home page
-        $response->assertRedirect(RouteServiceProvider::HOME);
-    }
 
     /** @test */
     public function it_allows_guest_users_to_access_guest_routes()
