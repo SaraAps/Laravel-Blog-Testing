@@ -26,16 +26,21 @@ class SessionsControllerTest extends TestCase
             'password' => bcrypt('Password123@'),
         ]);
 
+        $oldToken = session()->get('_token');
+
         $response = $this->post('/login', [
             'email' => $user->email,
             'password' => 'Password123@',
         ]);
 
+        $newToken = session()->get('_token');
+
+        // Assert that the session token has changed (regenerated)
+        $this->assertNotEquals($oldToken, $newToken);
+
         $response->assertRedirect('/');
         $this->assertAuthenticatedAs($user);
 
-
-        $this->assertNotNull(session()->get('_token'));
         $response->assertSessionHas('success', 'Welcome Back!');
     }
 

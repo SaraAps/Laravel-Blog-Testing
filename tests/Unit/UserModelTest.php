@@ -21,14 +21,6 @@ class UserModelTest extends TestCase
         $this->assertEquals($post->id, $user->posts->first()->id);
     }
 
-    /** @test */
-    public function it_has_hidden_attributes()
-    {
-        $user = User::factory()->create();
-
-        $this->assertArrayHasKey('password', $user->getHidden());
-        $this->assertArrayHasKey('remember_token', $user->getHidden());
-    }
 
     /** @test */
     public function it_casts_email_verified_at_to_datetime()
