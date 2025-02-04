@@ -18,8 +18,8 @@ Route::post('newsletter', NewsletterController::class);
 Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
 
-Route::get('login', [SessionsController::class, 'create'])->middleware('guest');
-Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
+Route::get('login', [SessionsController::class, 'create'])->middleware('guest')->name('login');
+Route::post('login', [SessionsController::class, 'store'])->middleware('guest')->name('login');
 
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
