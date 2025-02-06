@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Tests\TestCase;
 use App\Models\Post;
 use App\Models\User;
@@ -31,6 +32,7 @@ class AdminPostControllerTest extends TestCase
     /** @test */
     public function it_shows_the_create_post_form()
     {
+        $this->withoutMiddleware([VerifyCsrfToken::class]);
         $admin = User::factory()->create(['is_admin' => true]);
 
         $this->actingAs($admin);
@@ -43,6 +45,7 @@ class AdminPostControllerTest extends TestCase
     /** @test */
     public function it_stores_a_new_post()
     {
+        $this->withoutMiddleware([VerifyCsrfToken::class]);
         Storage::fake('public');
         $admin = User::factory()->create(['is_admin' => true]);
         $category = Category::factory()->create();
