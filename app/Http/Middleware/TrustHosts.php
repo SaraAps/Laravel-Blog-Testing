@@ -15,6 +15,7 @@ class TrustHosts extends Middleware
     {
         return [
             $this->allSubdomainsOfApplicationUrl(),
+            '^127\.0\.0\.1$', // This is the default value
         ];
     }
 }

@@ -2,9 +2,11 @@
 
 namespace Tests;
 
+use Dotenv\Dotenv;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
+use Illuminate\Support\Facades\Artisan;
 use Laravel\Dusk\TestCase as BaseTestCase;
 
 abstract class DuskTestCase extends BaseTestCase
@@ -17,9 +19,20 @@ abstract class DuskTestCase extends BaseTestCase
      * @beforeClass
      * @return void
      */
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        // Load .env.dusk.local specifically for Dusk
+        $dotenv = Dotenv::createImmutable(base_path(), '.env.dusk.local');
+        $dotenv->load();
+
+        // Optionally, run any database migrations if necessary
+        Artisan::call('migrate');
+    }
     public static function prepare()
     {
-            static::startChromeDriver();
+        static::startChromeDriver();
 
     }
 

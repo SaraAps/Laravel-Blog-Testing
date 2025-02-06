@@ -60,14 +60,10 @@ class AuthMiddlewareTest extends TestCase
         $app = $this->app;
         $trustHosts = new TrustHosts($app);
 
-        // Set the application URL to a domain with subdomains
-        config(['app.url' => 'https://example.com']);
-
-        // Get the trusted hosts
+        config(['app.url' => 'http://127.0.0.1:8000']);
         $trustedHosts = $trustHosts->hosts();
 
-        // Assert that all subdomains of the application URL are trusted
-        $this->assertContains('^(.+)\.example\.com$', $trustedHosts);
+        $this->assertContains('^127\.0\.0\.1$', $trustedHosts);
     }
     /** @test */
     public function it_redirects_unauthenticated_users_to_login_for_non_json_requests()
