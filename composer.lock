@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ab26b2b3ac90fbff40809aa444e06c7",
+    "content-hash": "38ab68e281b84eb296e6e16c0e0ea333",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8012,6 +8012,57 @@
                 }
             ],
             "time": "2020-09-28T06:39:44+00:00"
+        },
+        {
+            "name": "staudenmeir/dusk-updater",
+            "version": "v1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/staudenmeir/dusk-updater.git",
+                "reference": "34a5e26ccaf729033c6511f8ebf9e7e1f127fc84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/staudenmeir/dusk-updater/zipball/34a5e26ccaf729033c6511f8ebf9e7e1f127fc84",
+                "reference": "34a5e26ccaf729033c6511f8ebf9e7e1f127fc84",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3|^8.0",
+                "symfony/process": "^4.2|^5.0|^6.0|^7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.0|^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Staudenmeir\\DuskUpdater\\DuskServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Staudenmeir\\DuskUpdater\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Staudenmeir",
+                    "email": "mail@jonas-staudenmeir.de"
+                }
+            ],
+            "description": "Updater for Laravel Dusk ChromeDriver binaries",
+            "support": {
+                "issues": "https://github.com/staudenmeir/dusk-updater/issues",
+                "source": "https://github.com/staudenmeir/dusk-updater/tree/v1.5.1"
+            },
+            "time": "2024-08-19T20:14:33+00:00"
         },
         {
             "name": "theseer/tokenizer",
