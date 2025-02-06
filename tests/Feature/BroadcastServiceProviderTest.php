@@ -12,8 +12,9 @@ class BroadcastServiceProviderTest extends TestCase
     public function it_registers_broadcast_routes()
     {
         Broadcast::shouldReceive('routes')->once();
+        Broadcast::shouldReceive('channel')->andReturn(true);
 
-        $provider = new BroadcastServiceProvider(App());
+        $provider = new BroadcastServiceProvider($this->app);
         $provider->boot();
     }
 

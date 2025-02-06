@@ -60,13 +60,9 @@ class AuthMiddlewareTest extends TestCase
         $app = $this->app;
         $trustHosts = new TrustHosts($app);
 
-        // Set the application URL to a domain with subdomains
         config(['app.url' => 'http://127.0.0.1:8000']);
-
-        // Get the trusted hosts
         $trustedHosts = $trustHosts->hosts();
 
-        // Assert that all subdomains of the application URL are trusted
         $this->assertContains('^127\.0\.0\.1$', $trustedHosts);
     }
     /** @test */
