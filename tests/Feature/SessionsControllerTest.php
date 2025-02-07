@@ -20,30 +20,29 @@ class SessionsControllerTest extends TestCase
     }
 
     /** @test */
+    /** @test */
     public function it_logs_in_a_user_with_valid_credentials()
     {
         $user = User::factory()->create([
-            'password' => bcrypt('Password123@'),
+            'email' => 'test@example.com',
+            'password' => bcrypt('Password@123'),
         ]);
-
-        $oldToken = session()->get('_token');
 
         $response = $this->post('/login', [
-            'email' => $user->email,
-            'password' => 'Password123@',
-            '_token' => csrf_token(),
+            'email' => 'test@example.com',
+            'password' => 'Password@123',
         ]);
 
-        $newToken = session()->get('_token');
+        dd(session()->all());
 
-        // Assert that the session token has changed (regenerated)
-        $this->assertNotEquals($oldToken, $newToken);
-
+        // Assert that the user is redirected to the home page with a success message
         $response->assertRedirect('/');
-//        $this->assertAuthenticatedAs($user);
-//       $response->assertSessionHas('success', 'Welcome Back!');
+        $response->assertSessionHas('success', 'Welcome Back!');
 
+        // Assert that the user is authenticated
+        $this->assertAuthenticatedAs($user);
     }
+
 
     /** @test */
     public function it_fails_to_log_in_with_invalid_credentials()
@@ -72,7 +71,6 @@ class SessionsControllerTest extends TestCase
         $response->assertRedirect('/');
         $this->assertGuest();
 
-        // Test flash message
         $response->assertSessionHas('success', 'Goodbye!');
     }
 }

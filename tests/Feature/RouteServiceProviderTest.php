@@ -8,18 +8,17 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Http\Request;
 use Tests\TestCase;
 use App\Models\User;
+use Mockery;
 
 class RouteServiceProviderTest extends TestCase
 {
     public function test_boot_configures_routes()
     {
-        // Mock the Route facade for the API route group
         Route::shouldReceive('prefix')->with('api')->once()->andReturnSelf();
         Route::shouldReceive('middleware')->with('api')->once()->andReturnSelf();
         Route::shouldReceive('namespace')->with($this->app->getNamespace())->once()->andReturnSelf();
         Route::shouldReceive('group')->with(base_path('routes/api.php'))->once();
 
-        // Mock the Route facade for the web route group
         Route::shouldReceive('middleware')->with('web')->once()->andReturnSelf();
         Route::shouldReceive('namespace')->with($this->app->getNamespace())->once()->andReturnSelf();
         Route::shouldReceive('group')->with(base_path('routes/web.php'))->once();
