@@ -11,7 +11,7 @@ class AuthTest extends DuskTestCase
 {
     public function testUserCanRegisterAndLogin()
     {
-        $faker = Factory::create(); // Initialize Faker
+        $faker = Factory::create();
 
         $this->browse(function (Browser $browser) use ($faker) {
             $name = $faker->name;
@@ -24,18 +24,21 @@ class AuthTest extends DuskTestCase
                 ->type('username', $username)
                 ->type('email', $email)
                 ->type('password', $password)
+                ->pause(2000)
                 ->press('SIGN UP')
                 ->assertPathIs('/')
                 ->assertSee('Laravel');
 
             $browser->press('WELCOME, ' . strtoupper($name) . '!')
             ->clickLink('Log Out')
+                ->pause(1000)
                 ->assertPathIs('/')
                 ->assertSee('Laravel');
 
             $browser->visit('/login')
                 ->type('email', $email)
                 ->type('password', $password)
+                ->pause(1000)
                 ->press('LOG IN')
                 ->assertPathIs('/')
                 ->assertSee('Laravel');

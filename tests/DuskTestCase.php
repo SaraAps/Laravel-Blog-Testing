@@ -8,11 +8,12 @@ use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Illuminate\Support\Facades\Artisan;
 use Laravel\Dusk\TestCase as BaseTestCase;
+use Tests\Browser\Traits\CleanupDatabase;
 
 abstract class DuskTestCase extends BaseTestCase
 {
     use CreatesApplication;
-
+    use CleanupDatabase;
     /**
      * Prepare for Dusk test execution.
      *

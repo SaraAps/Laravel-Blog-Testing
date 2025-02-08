@@ -23,11 +23,11 @@ class AdminCreatePostTest extends DuskTestCase
                 ->type('excerpt', 'This is the content of the new post.')
                 ->type('body', 'This is the content of the new post, and the body.')
                 ->select('category_id', $category->id)
+                ->pause(1000)
                 ->scrollTo('')
                 ->script("document.querySelector('button[type=\"submit\"]').click();");
 
-            // Continue with the Dusk chain
-            $browser->pause(5000)
+            $browser->pause(3000)
             ->assertPathIs('/')
             ->assertSee('New Post Title');
         });
@@ -42,7 +42,7 @@ class AdminCreatePostTest extends DuskTestCase
                 ->scrollTo('')
                 ->script("document.querySelector('button[type=\"submit\"]').click();");
 
-            $browser->pause(5000)
+            $browser->pause(3000)
                 ->assertScript('return document.querySelector("input[name=\'title\']").validity.valueMissing === true');
         });
     }

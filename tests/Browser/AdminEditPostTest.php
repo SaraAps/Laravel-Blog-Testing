@@ -18,18 +18,18 @@ class AdminEditPostTest extends DuskTestCase
         $this->browse(function (Browser $browser) use ($admin, $post, $newCategory) {
             $browser->loginAs($admin)
                 ->visit("/admin/posts/{$post->id}/edit")
-                ->assertInputValue('title', $post->title) // Check existing title
+                ->assertInputValue('title', $post->title)
                 ->type('title', 'Updated Post Title')
                 ->type('slug', 'updated-post-title')
                 ->attach('thumbnail', 'public/images/illustration-3.png')
+                ->pause(1000)
                 ->type('excerpt', 'Updated excerpt content.')
                 ->type('body', 'Updated post body content.')
                 ->select('category_id', $newCategory->id)
                 ->scrollTo('')
                 ->script("document.querySelector('button[type=\"submit\"]').click();");
 
-            // Continue with Dusk chain
-            $browser->pause(5000)
+            $browser->pause(4000)
                 ->assertPathIs("/admin/posts/{$post->id}/edit")
                 ->assertSee('Updated');
         });

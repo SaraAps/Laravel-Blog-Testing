@@ -17,7 +17,9 @@ class AdminDeletePostTest extends DuskTestCase
         $this->browse(function (Browser $browser) use ($admin) {
             $browser->loginAs($admin)
                 ->visit('/admin/posts')
+                ->pause(1000)
                 ->assertSee('Delete')
+                ->pause(1000)
                 ->within('.min-w-full tr:last-child', function ($browser) {
                     $browser->press('Delete');
                 })
