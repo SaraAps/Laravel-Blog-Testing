@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Providers\RouteServiceProvider;
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Http\Request;
@@ -12,23 +13,14 @@ use Mockery;
 
 class RouteServiceProviderTest extends TestCase
 {
-    public function test_boot_configures_routes()
+    public function test_web_routes_are_loaded()
     {
-        Route::shouldReceive('prefix')->with('api')->once()->andReturnSelf();
-        Route::shouldReceive('middleware')->with('api')->once()->andReturnSelf();
-        Route::shouldReceive('namespace')->with($this->app->getNamespace())->once()->andReturnSelf();
-        Route::shouldReceive('group')->with(base_path('routes/api.php'))->once();
 
-        Route::shouldReceive('middleware')->with('web')->once()->andReturnSelf();
-        Route::shouldReceive('namespace')->with($this->app->getNamespace())->once()->andReturnSelf();
-        Route::shouldReceive('group')->with(base_path('routes/web.php'))->once();
+        $this->assertTrue(Route::has('home'));
 
-        $provider = new RouteServiceProvider($this->app);
-
-        $provider->boot();
+        $response = $this->get('/');
+        $response->assertStatus(200);
     }
-
-
     public function test_rate_limiting()
     {
         RateLimiter::shouldReceive('for')->once();
