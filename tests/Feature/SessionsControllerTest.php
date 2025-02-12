@@ -24,23 +24,18 @@ class SessionsControllerTest extends TestCase
     public function it_logs_in_a_user_with_valid_credentials()
     {
         $user = User::factory()->create([
-            'email' => 'test@example.com',
-            'password' => bcrypt('Password@123'),
+            'password' =>'Password@123',
         ]);
 
         $response = $this->post('/login', [
-            'email' => 'test@example.com',
+            'email' => $user->email,
             'password' => 'Password@123',
         ]);
 
-        dd(session()->all());
-
-        // Assert that the user is redirected to the home page with a success message
+        $this->assertAuthenticatedAs($user);
+        $response->assertSessionHasNoErrors();
         $response->assertRedirect('/');
         $response->assertSessionHas('success', 'Welcome Back!');
-
-        // Assert that the user is authenticated
-        $this->assertAuthenticatedAs($user);
     }
 
 

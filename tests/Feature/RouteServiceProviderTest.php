@@ -23,10 +23,8 @@ class RouteServiceProviderTest extends TestCase
         Route::shouldReceive('namespace')->with($this->app->getNamespace())->once()->andReturnSelf();
         Route::shouldReceive('group')->with(base_path('routes/web.php'))->once();
 
-        // Create an instance of the RouteServiceProvider
         $provider = new RouteServiceProvider($this->app);
 
-        // Call the boot method
         $provider->boot();
     }
 
