@@ -1,8 +1,8 @@
 # Laravel Blog Testing
 This repository is a clone of the following project: https://github.com/JeffreyWay/Laravel-From-Scratch-Blog-Project
 ### *All the adjustments of the code are done for testing purposes as a part of a faculty course.*
-
-# Laravel From Scratch Blog Post Demo Project
+---------------------------------------------------------------------------------------------------
+## Laravel From Scratch Blog Post Demo Project
 
 http://laravelfromscratch.com
 
